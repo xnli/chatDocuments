@@ -11,22 +11,23 @@ from ui.chat import render_chat_interface
 def main():
     st.set_page_config(
         page_title="ChatPDF",
-        layout="wide"
+        layout="wide",
+        initial_sidebar_state="collapsed"  # 默认折叠左侧边栏
     )
     
     st.title("ChatPDF")
     
-    # 创建三列布局
-    upload_col, pdf_col, chat_col = st.columns([1, 3, 1])
+    # 只使用两列，并调整比例，PDF区域窄一点，对话区域宽一点
+    pdf_col, chat_col = st.columns([2, 1.5])
     
-    with upload_col:
+    # 使用 sidebar 来放置文件上传组件
+    with st.sidebar:
         file_path = render_file_uploader()
     
     with pdf_col:
         if file_path and os.path.exists(file_path):
             try:
                 with open(file_path, "rb") as pdf_file:
-                    st.write(f"正在打开文件: {file_path}")  # 调试信息
                     render_pdf_viewer(pdf_file)
             except Exception as e:
                 st.error(f"文件打开失败: {str(e)}")
