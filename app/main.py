@@ -2,12 +2,16 @@ import sys
 import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
+from streamlit_float import *
 import streamlit as st
 from ui.upload import render_file_uploader
 from ui.pdf import render_pdf_viewer
 from ui.chat import render_chat_interface
 
 def main():
+    # 初始化浮动功能
+    # float_init()
+    
     st.set_page_config(
         page_title="ChatPDF",
         layout="wide"
