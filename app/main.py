@@ -9,9 +9,6 @@ from ui.pdf import render_pdf_viewer
 from ui.chat import render_chat_interface
 
 def main():
-    # 初始化浮动功能
-    # float_init()
-    
     st.set_page_config(
         page_title="ChatPDF",
         layout="wide"
@@ -20,15 +17,19 @@ def main():
     st.title("ChatPDF")
     
     # 创建三列布局
-    upload_col, pdf_col, chat_col = st.columns([1, 2, 1])
+    upload_col, pdf_col, chat_col = st.columns([1, 3, 1])
     
     with upload_col:
         file_path = render_file_uploader()
     
     with pdf_col:
-        if file_path:
-            with open(file_path, "rb") as pdf_file:
-                render_pdf_viewer(pdf_file)
+        if file_path and os.path.exists(file_path):
+            try:
+                with open(file_path, "rb") as pdf_file:
+                    st.write(f"正在打开文件: {file_path}")  # 调试信息
+                    render_pdf_viewer(pdf_file)
+            except Exception as e:
+                st.error(f"文件打开失败: {str(e)}")
     
     with chat_col:
         if file_path:
