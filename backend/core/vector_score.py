@@ -1,7 +1,7 @@
 from typing import Optional, List
 import faiss
-from llama_index.vector_stores import FaissVectorStore
-from llama_index import VectorStoreIndex, Document
+from llama_index.core.vector_stores import FaissVectorStore  # 更新导入路径
+from llama_index.core import VectorStoreIndex, Document  # 更新导入路径
 from pathlib import Path
 import numpy as np
 from config import VECTOR_STORE_DIR

@@ -12,8 +12,8 @@ for dir_path in [DATA_DIR, VECTOR_STORE_DIR, UPLOAD_DIR]:
 
 # LLM配置
 OLLAMA_HOST = "http://localhost:11434"
-OLLAMA_MODEL = "llama2"
-
+OLLAMA_MODEL = "mistral"
+EMBED_MODEL = "/root/autodl-tmp/hf/BAAI/bge-small-en-v1.5"  # 新增
 # 文档处理配置
 CHUNK_SIZE = 1000
 CHUNK_OVERLAP = 200

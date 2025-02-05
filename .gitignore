@@ -1,0 +1,66 @@
+# 忽略模型文件
+*.h5
+*.pth
+*.pt
+*.ckpt
+*.pb
+*.weigh
+*.weights
+
+# 忽略 PyCharm 文件
+/.idea/
+/*.iml
+/*.ipynb_checkpoints/
+
+# 忽略 VSCode 文件
+/.vscode/
+/.history/
+/.DS_Store
+*.code-workspace
+
+# 忽略任意目录下的数据文件夹
+**/data/
+**/data-*
+**/*.csv
+**/*.tsv
+**/*.xlsx
+**/*.xls
+**/*.json
+**/*.xml
+
+# 忽略任意目录下的输出文件夹
+**/output/
+**/*.out
+**/*.log
+**/*.txt
+**/*.png
+**/*.jpg
+**/*.jpeg
+**/*.pdf
+**/*.html
+
+# 忽略日志文件
+/log/
+/log-*
+/*.log
+
+# 忽略临时文件和编译输出
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyc
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+*.pyc
+*.pyo
+*.pyc
+*.pyo
+*.pyc
+*.pyc
+
+# 忽略 Jupyter Notebook 文件
+*.ipynb_checkpoints/

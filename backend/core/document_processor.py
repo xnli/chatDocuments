@@ -1,5 +1,6 @@
-from llama_index import VectorStoreIndex, SimpleDirectoryReader
-from llama_index.text_splitter import TokenTextSplitter
+from llama_index.core import VectorStoreIndex  # 更新导入路径
+from llama_index.core.readers import SimpleDirectoryReader  # 更新导入路径
+from llama_index.core.text_splitter import TokenTextSplitter  # 更新导入路径
 from config import CHUNK_SIZE, CHUNK_OVERLAP
 
 class DocumentProcessor:

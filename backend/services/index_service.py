@@ -1,5 +1,5 @@
 from typing import Optional, Dict
-from llama_index import VectorStoreIndex
+from llama_index.core import VectorStoreIndex  # 更新导入路径
 from backend.core.document_processor import DocumentProcessor
 import os
 from config import VECTOR_STORE_DIR
