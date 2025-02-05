@@ -15,7 +15,7 @@ def main():
         initial_sidebar_state="collapsed"  # 默认折叠左侧边栏
     )
     
-    st.title("ChatPDF")
+    st.title("ChatPDF 📚")
     
     # 只使用两列，并调整比例，PDF区域窄一点，对话区域宽一点
     pdf_col, chat_col = st.columns([2, 1.5])
