@@ -2,6 +2,9 @@
 
 一个基于 LlamaIndex 和 Streamlit 构建的 PDF 智能问答系统。可以上传 PDF 文档,并与文档内容进行对话交互。
 
+<!-- 相对路径引用 -->
+![图片描述](doc/images/chatpdf.png)
+
 ## 功能特性
 
 - 支持 PDF 文档上传和在线预览

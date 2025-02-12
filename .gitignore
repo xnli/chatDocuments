@@ -33,7 +33,6 @@
 **/*.out
 **/*.log
 **/*.txt
-**/*.png
 **/*.jpg
 **/*.jpeg
 **/*.pdf
